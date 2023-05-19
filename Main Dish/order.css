@@ -1,0 +1,169 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  border-radius: 10px;
+  /* background-color: #adb5bd; */
+  background: linear-gradient(
+    217deg,
+    rgba(190, 160, 93, 0.8),
+    rgba(4, 180, 211, 0.253) 70.71%
+  );
+  height: 100%;
+  margin: 1rem auto;
+  width: 90%;
+  padding: 1rem;
+}
+
+.heading-section {
+  display: flex;
+  justify-content: space-between;
+  height: 2.4rem;
+}
+.app-name {
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  background-color: rgba(24, 22, 22, 0.541);
+  padding: 0.6rem;
+  border-radius: 10px;
+  color: white;
+}
+.sreach {
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 500;
+  height: 1.6rem;
+  margin-top: 2rem;
+  font-size: 1.4rem;
+}
+.navbar a {
+  text-decoration: none;
+  color: rgb(10, 10, 10);
+
+  position: relative;
+  padding: 0 1rem;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.navbar a:hover {
+  background-color: rgb(219, 218, 218);
+}
+
+.order-items {
+  padding: 0 1.2rem 0 1.6rem;
+  height: 80%;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.order-items p {
+  font-family: "Rubik", sans-serif;
+}
+
+.checkout-btn {
+  background-color: rgb(56, 141, 197);
+  height: 2.6rem;
+  width: 100%;
+  cursor: pointer;
+  margin: auto;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  border-radius: 5px;
+}
+.checkout-btn:hover {
+  background-color: rgb(74, 157, 212);
+}
+
+/*----------------UNIVERSAL CLASS------------------------------------*/
+.grid-done {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr 1fr 0.5fr;
+  grid-template-columns: 4fr 1fr;
+  margin-top: 1.8rem;
+  border: transparent 0.05rem;
+  border-radius: 10px;
+  background: rgba(223, 223, 223, 0.308);
+  box-shadow: 15px 10px 5px rgba(126, 125, 125, 0.308);
+  padding: 0 0 0 1rem;
+}
+.description {
+  font-weight: 300;
+  grid-column: 1;
+  line-height: 1.6rem;
+  text-align: left;
+  margin: 0.6rem 0 0.6rem 0;
+}
+.descript-photo {
+  max-height: 220px;
+  object-fit: cover;
+  height: 100%;
+  grid-column: 2;
+  grid-row: 1/4;
+  width: 100%;
+  border-radius: 0 10px 10px 0;
+}
+.last-element {
+  margin-bottom: 3rem;
+}
+.position {
+  position: relative;
+}
+
+.icons {
+  position: absolute;
+  padding: 3px;
+  top: auto;
+  left: 1rem;
+  height: 1.8rem;
+  bottom: 0;
+  background-color: rgba(97, 97, 97, 0.685);
+  color: white;
+  border-radius: 10px;
+}
+
+.icons:hover {
+  background-color: rgba(148, 147, 147, 0.685);
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.mar-top {
+  margin-top: 0.6rem;
+}
+.add-order {
+  margin-bottom: 2rem;
+}
+.side-dishes-photo {
+  width: 100%;
+  height: 16rem;
+  border-radius: 10px;
+  image-rendering: pixelated;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+/*---------------------------------------------------------------------------------- */

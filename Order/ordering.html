@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="ordering.css" rel="stylesheet" />
+    <title>Deliver.me!</title>
+  </head>
+  <body>
+    <section class="add-order">
+      <div class="container">
+        <div class="small-cont">
+          <div class="head-exit">
+            <h1>Your cart</h1>
+            <svg
+              id="iks"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 icons"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </div>
+          <div class="add-items">
+            <ul id="items"></ul>
+          </div>
+        </div>
+        <div class="billing-container">
+          <div class="billing-info">
+            <p>Current bill</p>
+            <p id="ord-sum">Number</p>
+          </div>
+          <div class="billing-info">
+            <p>Delivery cost</p>
+            <p id="del-cost">Number</p>
+          </div>
+          <div class="billing-info">
+            <p>Final bill</p>
+            <p id="fin-sum">Number</p>
+          </div>
+          <button class="checkout-btn last-element">GO TO CHECKOUT</button>
+        </div>
+      </div>
+    </section>
+    <script src="\new.js"></script>
+  </body>
+</html>

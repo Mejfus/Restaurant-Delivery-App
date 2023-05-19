@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  border-radius: 2%;
+  background: linear-gradient(
+    217deg,
+    rgba(190, 160, 93, 0.8),
+    rgba(4, 180, 211, 0.253) 70.71%
+  );
+
+  height: 100vh;
+  margin: 0 auto;
+  width: 95vw;
+}
+.add-items {
+  margin-top: 1.2rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  padding: 0 2rem 0 2rem;
+}
+
+.checkout-btn {
+  background-color: rgb(56, 141, 197);
+  height: 2.6rem;
+  width: 100%;
+  cursor: pointer;
+  margin: auto;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  border-radius: 5px;
+}
+
+.billing-info {
+  display: flex;
+  justify-content: space-between;
+}
+.billing-container {
+  position: absolute;
+  margin: 0 auto 0 auto;
+  bottom: 0;
+  margin-bottom: 0.8rem;
+  width: 100%;
+  padding: 0 2rem 0 2rem;
+}
+
+.head-exit {
+  padding: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.icons:hover {
+  background-color: rgb(21, 102, 224);
+  color: white;
+  border-radius: 10%;
+}
+
+/*----------------UNIVERSAL CLASS------------------------------------*/
+
+.grid-done {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 4fr 1fr;
+}
+.description {
+  font-weight: 300;
+  grid-column: 1;
+  line-height: 1.6rem;
+  text-align: left;
+  margin-top: 0.6rem;
+}
+.descript-photo {
+  grid-column: 2;
+  width: 100%;
+  border-radius: 10%;
+}
+.last-element {
+  margin-bottom: 1rem;
+}
+.position {
+  position: relative;
+}
+
+.icons {
+  height: 1.8rem;
+  background-color: rgba(97, 97, 97, 0.685);
+  color: white;
+  border-radius: 5px;
+}
+
+.icons:hover {
+  background-color: rgb(21, 102, 224);
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.mar-top {
+  margin-top: 0.6rem;
+}
+/*---------------------------------------------------------------------------------- */
+.grid-done {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1.4rem;
+}
+.mar-top {
+  margin-top: 0.6rem;
+}
+
+.add-flex {
+  display: flex;
+  justify-content: space-between;
+}
