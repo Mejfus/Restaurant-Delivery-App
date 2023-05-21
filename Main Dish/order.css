@@ -52,6 +52,7 @@ html {
   height: 1.6rem;
   margin-top: 2rem;
   font-size: 1.4rem;
+  border-radius: 10px;
 }
 .navbar a {
   text-decoration: none;
@@ -80,6 +81,8 @@ html {
 }
 
 .checkout-btn {
+  position: sticky;
+  bottom: 0;
   background-color: rgb(56, 141, 197);
   height: 2.6rem;
   width: 100%;
