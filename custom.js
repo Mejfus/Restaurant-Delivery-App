@@ -338,7 +338,6 @@ const addOrderSoftDrinks = function (index) {
 
   finalOrder.orderedDishes.forEach((dish) => {
     if (dish.name === name) {
-      ``;
       dish.quantity += 1;
       found = true;
       return;
