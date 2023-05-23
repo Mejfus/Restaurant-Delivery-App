@@ -130,6 +130,26 @@ const finalOrder = {
 
 // Na click pozvati funkciju i dodati joj parametar
 
+const pertosa = document.getElementById("pertosaBtn");
+const caprese = document.getElementById("capreseBtn");
+const pomodoro = document.getElementById("pomodoroBtn");
+const vege = document.getElementById("vegeBtn");
+const biftek = document.getElementById("biftekBtn");
+const bardolino = document.getElementById("bardolinoBtn");
+const borgo = document.getElementById("borgoBtn");
+const mondelo = document.getElementById("mondeloBtn");
+const taranto = document.getElementById("tarantoBtn");
+const lava = document.getElementById("lavaBtn");
+const rakija = document.getElementById("rakijaBtn");
+const viski = document.getElementById("viskiBtn");
+const pelin = document.getElementById("pelinBtn");
+const jeger = document.getElementById("jegerBtn");
+const vino = document.getElementById("vinoBtn");
+const cola = document.getElementById("colaBtn");
+const fanta = document.getElementById("fantaBtn");
+const sprite = document.getElementById("spriteBtn");
+const pepsi = document.getElementById("pepsiBtn");
+const water = document.getElementById("waterBtn");
 const rissoto = document.getElementById("rissotoBtn");
 const bussala = document.getElementById("bussalaBtn");
 const vietri = document.getElementById("vietriBtn");
@@ -162,6 +182,72 @@ bussala.addEventListener("click", function () {
 rumpsteak.addEventListener("click", function () {
   addOrder(4);
 });
+
+pertosa.addEventListener("click", function () {
+  addOrderSide(0);
+});
+
+caprese.addEventListener("click", function () {
+  addOrderSide(1);
+});
+pomodoro.addEventListener("click", function () {
+  addOrderSide(2);
+});
+vege.addEventListener("click", function () {
+  addOrderSide(3);
+});
+biftek.addEventListener("click", function () {
+  addOrderSide(4);
+});
+
+bardolino.addEventListener("click", function () {
+  addOrderDessert(0);
+});
+borgo.addEventListener("click", function () {
+  addOrderDessert(1);
+});
+mondelo.addEventListener("click", function () {
+  addOrderDessert(2);
+});
+taranto.addEventListener("click", function () {
+  addOrderDessert(3);
+});
+lava.addEventListener("click", function () {
+  addOrderDessert(4);
+});
+
+rakija.addEventListener("click", function () {
+  addOrderDrinks(0);
+});
+
+viski.addEventListener("click", function () {
+  addOrderDrinks(1);
+});
+pelin.addEventListener("click", function () {
+  addOrderDrinks(2);
+});
+jeger.addEventListener("click", function () {
+  addOrderDrinks(3);
+});
+vino.addEventListener("click", function () {
+  addOrderDrinks(4);
+});
+
+cola.addEventListener("click", function () {
+  addOrderSoftDrinks(0);
+});
+fanta.addEventListener("click", function () {
+  addOrderSoftDrinks(1);
+});
+pepsi.addEventListener("click", function () {
+  addOrderSoftDrinks(2);
+});
+sprite.addEventListener("click", function () {
+  addOrderSoftDrinks(3);
+});
+water.addEventListener("click", function () {
+  addOrderSoftDrinks(4);
+});
 //=======================ORDER BTN================================//
 
 orderBtn.addEventListener("click", function () {
@@ -190,4 +276,77 @@ const addOrder = function (index) {
 
 const passValue = function () {
   window.localStorage.setItem("order", JSON.stringify(finalOrder));
+};
+const addOrderSide = function (index) {
+  let name = restaurant.mainMenu.sideDish[index].name;
+  let price = restaurant.mainMenu.sideDish[index].price;
+  let found = false;
+
+  finalOrder.orderedDishes.forEach((dish) => {
+    if (dish.name === name) {
+      dish.quantity += 1;
+      found = true;
+      return;
+    }
+  });
+  !found &&
+    finalOrder.orderedDishes.push({ name: name, price: price, quantity: 1 });
+
+  finalOrder.orderedSum += price;
+  orderBtn.textContent = `ADD MORE (${finalOrder.orderedSum}$)`;
+};
+const addOrderDessert = function (index) {
+  let name = restaurant.mainMenu.dessert[index].name;
+  let price = restaurant.mainMenu.dessert[index].price;
+  let found = false;
+
+  finalOrder.orderedDishes.forEach((dish) => {
+    if (dish.name === name) {
+      dish.quantity += 1;
+      found = true;
+      return;
+    }
+  });
+  !found &&
+    finalOrder.orderedDishes.push({ name: name, price: price, quantity: 1 });
+
+  finalOrder.orderedSum += price;
+  orderBtn.textContent = `ADD MORE (${finalOrder.orderedSum}$)`;
+};
+const addOrderDrinks = function (index) {
+  let name = restaurant.drinksMenu.alcoholic[index].name;
+  let price = restaurant.drinksMenu.alcoholic[index].price;
+  let found = false;
+
+  finalOrder.orderedDishes.forEach((dish) => {
+    if (dish.name === name) {
+      dish.quantity += 1;
+      found = true;
+      return;
+    }
+  });
+  !found &&
+    finalOrder.orderedDishes.push({ name: name, price: price, quantity: 1 });
+
+  finalOrder.orderedSum += price;
+  orderBtn.textContent = `ADD MORE (${finalOrder.orderedSum}$)`;
+};
+const addOrderSoftDrinks = function (index) {
+  let name = restaurant.drinksMenu.nonAlcoholic[index].name;
+  let price = restaurant.drinksMenu.nonAlcoholic[index].price;
+  let found = false;
+
+  finalOrder.orderedDishes.forEach((dish) => {
+    if (dish.name === name) {
+      ``;
+      dish.quantity += 1;
+      found = true;
+      return;
+    }
+  });
+  !found &&
+    finalOrder.orderedDishes.push({ name: name, price: price, quantity: 1 });
+
+  finalOrder.orderedSum += price;
+  orderBtn.textContent = `ADD MORE (${finalOrder.orderedSum}$)`;
 };
