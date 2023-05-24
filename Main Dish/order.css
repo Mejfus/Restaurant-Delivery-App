@@ -161,6 +161,7 @@ html {
   margin-bottom: 2rem;
 }
 .side-dishes-photo {
+  position: relative;
   width: 100%;
   height: 16rem;
   border-radius: 10px;
