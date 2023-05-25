@@ -159,6 +159,7 @@ const orderBtn = document.getElementById("checkBtn");
 const billInfo = document.getElementById("ord-sum");
 const deliveryCost = document.getElementById("del-cost");
 const getElementById = document.getElementById("fin-sum");
+const sidePhoto = document.getElementById("sideDishesPhoto");
 
 //========================RISSOTO===========================//
 rissoto.addEventListener("click", function () {

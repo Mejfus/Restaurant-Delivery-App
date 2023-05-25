@@ -21,7 +21,7 @@
     <section class="container">
     <section class="add-order" id="main-dishes">
         <div class="heading-section">
-          <input class="sreach" type="text" placeholder="Sreach for item..." />
+          <input class="sreach" id="sreach-bar" type="text" placeholder="Sreach for item..." />
           <p class="app-name">Piatto!</p>
         </div>
         <nav class="navbar">
@@ -155,7 +155,11 @@
       </section>
         <!-------------------------SIDE DISHES-------------------------------->
         <section class="add-order" id="side-dishes">
+          <div class="photo-cont">   
           <img src="\Photos\side-dishes.jpg" id="sideDishesPhoto" class="side-dishes-photo" />
+          <h3 class="photo-text">Side Dishes</h3>
+        </div>
+       
           <div class="order-items last-element">
             <div class="rissoto grid-done">
               <p class="mar-top">Insalata Pertosa</p>
@@ -287,8 +291,9 @@
         </section>
         <!---------------------------------DESSERTS-------------------------->
         <section id="desserts">
-          <div>
+          <div class="photo-cont">
             <img src="\Photos\desserts-photo.jpg" id="dessertsPhoto" class="side-dishes-photo" />
+            <h3 class="photo-text">Desserts</h3>
           </div>
 
           <div class="order-items last-element">
@@ -423,7 +428,10 @@
         <!------------------------------------DRINKS------------------------------------>
         <section id="drinks">
           
-          <div><img src="\Photos\drinks.jpg" id="drinksPhoto" class="side-dishes-photo" /></div>
+          <div class="photo-cont">
+            <img src="\Photos\drinks.jpg" id="drinksPhoto" class="side-dishes-photo" />
+            <h3 class="photo-text">Alcohol</h3>
+          </div>
           <div class="order-items last-element">
             <div class="rissoto grid-done">
               <p class="mar-top">Brandy</p>
@@ -553,8 +561,9 @@
           </div>
         </section>
         <!------------------------NON ALCOHOLIC BTN------------------->
-        <div>
+        <div class="photo-cont">
           <img src="\Photos\non-alcoholic.jpg" id="nonAlcoholPhoto" class="side-dishes-photo" />
+          <h3 class="photo-text">Soft Drinks</h3>
         </div>
 
         <div class="order-items last-element">
