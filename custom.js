@@ -159,7 +159,25 @@ const orderBtn = document.getElementById("checkBtn");
 const billInfo = document.getElementById("ord-sum");
 const deliveryCost = document.getElementById("del-cost");
 const getElementById = document.getElementById("fin-sum");
-const sidePhoto = document.getElementById("sideDishesPhoto");
+const descPhotos = document.querySelectorAll(".photo-cont");
+
+const sreachBar = document.getElementById("sreach-bar");
+
+sreachBar.addEventListener("input", filterList);
+
+function filterList() {
+  const filter = sreachBar.value.toLowerCase();
+  const listItems = document.querySelectorAll(".grid-done");
+
+  listItems.forEach((item) => {
+    let text = item.textContent.toLocaleLowerCase();
+    if (text.includes(filter)) {
+      item.style.display = "";
+    } else {
+      item.style.display = "none";
+    }
+  });
+}
 
 //========================RISSOTO===========================//
 rissoto.addEventListener("click", function () {
