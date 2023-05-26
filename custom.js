@@ -169,10 +169,18 @@ function filterList() {
   const filter = sreachBar.value.toLowerCase();
   const listItems = document.querySelectorAll(".grid-done");
 
+  const count = {};
+  count["main-dishes"] = 0;
+  count["side-dishes"] = 0;
+  count["desserts"] = 0;
+  count["drinks"] = 0;
+
   listItems.forEach((item) => {
-    let text = item.textContent.toLocaleLowerCase();
+    let parEl = item.parentElement.id;
+    let text = item.textContent.toLowerCase();
     if (text.includes(filter)) {
       item.style.display = "";
+      count[parEl]++;
     } else {
       item.style.display = "none";
     }
