@@ -174,9 +174,10 @@ function filterList() {
   count["side-dishes"] = 0;
   count["desserts"] = 0;
   count["drinks"] = 0;
+  count["soft-drinks"] = 0;
 
   listItems.forEach((item) => {
-    let parEl = item.parentElement.id;
+    let parEl = item.parentElement.parentElement.id;
     let text = item.textContent.toLowerCase();
     if (text.includes(filter)) {
       item.style.display = "";
@@ -185,6 +186,18 @@ function filterList() {
       item.style.display = "none";
     }
   });
+  for (const key in count) {
+    let sectionImg = document
+      .getElementById(key)
+      ?.getElementsByClassName("photo-cont")[0];
+    if (sectionImg) {
+      if (count[key] === 0) {
+        sectionImg.style.display = "none";
+      } else {
+        sectionImg.style.display = "";
+      }
+    }
+  }
 }
 
 //========================RISSOTO===========================//
